@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.ridhoperdana.sqlite.tambahTugas">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:id="@+id/linearLayout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah tugas"
+            android:textColor="@color/common_signin_btn_dark_text_default"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textAlignment="viewEnd"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/judul_tugas"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:text="Judul"
+        android:textColor="@color/common_signin_btn_dark_text_disabled"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/judul_diberikan"
+        android:layout_below="@+id/judul_tugas"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Waktu pengerjaan"
+            android:textAlignment="textStart"
+            android:textColor="@color/common_signin_btn_dark_text_default"
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/tanggal_diberikan"
+        android:layout_below="@+id/judul_diberikan"
+        android:layout_alignStart="@+id/judul_diberikan"
+        android:layout_alignEnd="@+id/judul_diberikan"
+        android:text="Tanggal Diberikan"
+        android:textColor="@color/common_signin_btn_dark_text_disabled"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/waktu_diberikan"
+        android:layout_below="@+id/tanggal_diberikan"
+        android:layout_alignStart="@+id/tanggal_diberikan"
+        android:layout_alignEnd="@+id/tanggal_diberikan"
+        android:text="Waktu diberikan"
+        android:textColor="@color/common_signin_btn_dark_text_disabled"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/tanggal_kumpul"
+        android:text="Tanggal dikumpulkan"
+        android:layout_below="@+id/waktu_diberikan"
+        android:layout_alignStart="@+id/waktu_diberikan"
+        android:layout_alignEnd="@+id/waktu_diberikan"
+        android:textColor="@color/common_signin_btn_dark_text_disabled"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/waktu_dikumpulkan"
+        android:layout_below="@+id/tanggal_kumpul"
+        android:layout_alignStart="@+id/tanggal_kumpul"
+        android:layout_alignEnd="@+id/tanggal_kumpul"
+        android:text="Waktu dikumpulkan"
+        android:textColor="@color/common_signin_btn_dark_text_disabled"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/linearLayout2"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/waktu_dikumpulkan"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kompleksitas"
+            android:textAlignment="textStart"
+            android:textColor="@color/common_signin_btn_dark_text_default"
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            android:id="@+id/judul_kompleksitas" />
+
+
+    </LinearLayout>
+    <RadioGroup
+        android:id="@+id/grupKompleksitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_below="@id/linearLayout2">
+
+        <RadioButton
+            android:id="@+id/mudah"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Mudah " />
+
+        <RadioButton
+            android:id="@+id/biasa"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Biasa" />
+
+        <RadioButton
+            android:id="@+id/sulit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Sulit" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambahkan"
+        android:id="@+id/tambah_tugas"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

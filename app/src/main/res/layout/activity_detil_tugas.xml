@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.ridhoperdana.sqlite.Detil_Tugas">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:id="@+id/linearLayout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detil Tugas"
+            android:textColor="@color/common_signin_btn_dark_text_default"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:textAlignment="viewEnd"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/judul_tugas"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:text="Judul"
+        android:textColor="#000000"
+        android:editable="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/judul_diberikan"
+        android:layout_below="@+id/judul_tugas"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Waktu pengerjaan"
+            android:textAlignment="textStart"
+            android:textColor="@color/common_signin_btn_dark_text_default"
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/tanggal_diberikan"
+        android:layout_below="@+id/judul_diberikan"
+        android:layout_alignStart="@+id/judul_diberikan"
+        android:layout_alignEnd="@+id/judul_diberikan"
+        android:text="Tanggal Diberikan"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/waktu_diberikan"
+        android:layout_below="@+id/tanggal_diberikan"
+        android:layout_alignStart="@+id/tanggal_diberikan"
+        android:layout_alignEnd="@+id/tanggal_diberikan"
+        android:text="Waktu diberikan"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/tanggal_kumpul"
+        android:text="Tanggal dikumpulkan"
+        android:layout_below="@+id/waktu_diberikan"
+        android:layout_alignStart="@+id/waktu_diberikan"
+        android:layout_alignEnd="@+id/waktu_diberikan"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/waktu_dikumpulkan"
+        android:layout_below="@+id/tanggal_kumpul"
+        android:layout_alignStart="@+id/tanggal_kumpul"
+        android:layout_alignEnd="@+id/tanggal_kumpul"
+        android:text="Waktu dikumpulkan"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/linearLayout2"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/waktu_dikumpulkan"
+        android:layout_alignParentStart="true"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kompleksitas"
+            android:textAlignment="textStart"
+            android:textColor="@color/common_signin_btn_dark_text_default"
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            android:id="@+id/judul_kompleksitas" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/isi_kompleksitas"
+        android:text="Kompleksitas"
+        android:textColor="#000000"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_alignStart="@+id/linearLayout2"
+        android:layout_alignEnd="@+id/linearLayout2"
+        android:editable="false"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/tombol_edit_tugas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:layout_marginBottom="20dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
+        android:onClick="edit_tugas"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/tombol_hapus_tugas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:src="@android:drawable/ic_delete"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
+        android:onClick="hapus_tugas"/>
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tugas_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/judul_tugas"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="judul tugas"
+        android:id="@+id/tugas_judul"
+        android:textSize="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/tugas_id"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status_kerja"
+        android:checked="false"
+        android:textSize="10dp"
+        android:layout_alignTop="@+id/tugas_judul"
+        android:layout_toStartOf="@+id/button"
+        android:onClick="kotakCentang"
+        style="@style/Base.Widget.AppCompat.CompoundButton.CheckBox"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/status_kerja"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp"
+        android:id="@+id/textView2">
+    </View>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detil"
+        android:id="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:textSize="10sp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:layout_marginEnd="16dp"
+        android:layout_alignTop="@+id/status_kerja"
+        android:layout_above="@+id/textView2"
+        android:onClick="detilTugas"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status"
+        android:id="@+id/status_tugas"
+        android:layout_alignBottom="@+id/tugas_judul"
+        android:layout_toEndOf="@+id/tugas_id"
+        android:visibility="gone"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/tanggal_diberikan"
+        android:text="Tanggal Diberikan"
+        android:textColor="#000000"
+        android:visibility="gone"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/waktu_diberikan"
+        android:layout_below="@+id/tanggal_diberikan"
+        android:layout_alignStart="@+id/tanggal_diberikan"
+        android:layout_alignEnd="@+id/tanggal_diberikan"
+        android:text="Waktu diberikan"
+        android:textColor="#000000"
+        android:visibility="gone"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/tanggal_kumpul"
+        android:text="Tanggal dikumpulkan"
+        android:layout_below="@+id/tugas_judul"
+        android:layout_alignStart="@+id/waktu_diberikan"
+        android:layout_alignEnd="@+id/waktu_diberikan"
+        android:textColor="#000000"
+        android:visibility="gone"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/waktu_dikumpulkan"
+        android:layout_below="@+id/tanggal_kumpul"
+        android:layout_alignStart="@+id/tanggal_kumpul"
+        android:layout_alignEnd="@+id/tanggal_kumpul"
+        android:text="Waktu dikumpulkan"
+        android:textColor="#000000"
+        android:visibility="gone"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/isi_kompleksitas"
+        android:text="Kompleksitas"
+        android:textColor="#000000"
+        android:editable="false"
+        android:visibility="gone"/>
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="id_tugas"-->
+    <!--android:id="@+id/tugas_id"-->
+    <!--android:layout_alignBottom="@+id/status_kerja"-->
+    <!--android:layout_alignEnd="@+id/tugas_judul"-->
+    <!--android:layout_marginEnd="117dp" />-->
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.ridhoperdana.sqlite.Content_Main"
+    android:background="@color/background"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:id="@+id/header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="35dp"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Halo!"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:background="#ffffff"
+            android:id="@+id/garis_bawah"
+            android:orientation="horizontal">
+        </LinearLayout>
+        <TextView
+            android:id="@+id/total_tugas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#ffffff"
+        android:id="@+id/layout_isi_tugas">
+
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@android:id/list"
+            />
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Tambah"-->
+        <!--android:id="@+id/tombol_tambah_tugas"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginStart="233dp" />-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/tombol_tambah_tugas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"/>
+
+</RelativeLayout>
